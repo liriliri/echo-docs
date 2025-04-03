@@ -1,2 +1,6 @@
-# echo-docs
-Documentation for Echo
+# echo.liriliri.io
+
+```bash
+npm i
+npm run dev
+```
