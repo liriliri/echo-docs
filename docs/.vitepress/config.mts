@@ -62,4 +62,21 @@ export default defineConfig({
       copyright: '版权所有 © 2025 至今 liriliri',
     },
   },
+  head: [
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-Z93HBDFESL',
+      },
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z93HBDFESL');`,
+    ],
+  ],
 })
