@@ -11,10 +11,13 @@ hero:
   actions:
     - theme: alt
       text: Windows
-      link: https://release.liriliri.io/ECHO-0.5.0-win-x64.exe
+      link: https://release.liriliri.io/ECHO-0.6.0-win-x64.exe
     - theme: alt
-      text: macOS
-      link: https://release.liriliri.io/ECHO-0.5.0-mac-arm64.dmg 
+      text: macOS Apple silicon
+      link: https://release.liriliri.io/ECHO-0.6.0-mac-arm64.dmg 
+    - theme: alt
+      text: macOS Intel chip
+      link: https://release.liriliri.io/ECHO-0.6.0-mac-x64.dmg  
   image:
     src: /screenshot.png
     alt: screenshot
