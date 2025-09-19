@@ -6,6 +6,7 @@ const editLinkPattern =
   'https://github.com/liriliri/echo-docs/edit/master/docs/:path'
 
 export default defineConfig({
+  lang: 'zh',
   title: 'ECHO',
   description: 'ECHO Documentation',
   lastUpdated: true,
@@ -60,6 +61,13 @@ export default defineConfig({
     footer: {
       message: '基于 AGPL-3.0 许可发布',
       copyright: '版权所有 © 2025 至今 liriliri',
+    },
+  },
+  vite: {
+    resolve: {
+      alias: [
+        { find: '@share', replacement: path.resolve(__dirname, './share') },
+      ],
     },
   },
   head: [

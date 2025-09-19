@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/liriliri/echo-docs#readme",
   "devDependencies": {
+    "luna-shader-toy-player": "^0.5.1",
     "vitepress": "^1.5.0"
   }
 }
