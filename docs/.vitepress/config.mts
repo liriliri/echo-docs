@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress'
-import * as fs from 'fs'
-import * as path from 'path'
+import {
+  wechatpay,
+  logo,
+  shareAlias,
+  googleAnalytics,
+} from './share/config.mjs'
 
 const editLinkPattern =
   'https://github.com/liriliri/echo-docs/edit/master/docs/:path'
@@ -32,22 +36,10 @@ export default defineConfig({
         },
       },
     },
-    logo: {
-      src: '/logo.png',
-      width: 48,
-      height: 48,
-    },
+    logo,
     outlineTitle: '在这一页上',
     socialLinks: [
-      {
-        icon: {
-          svg: fs.readFileSync(
-            path.resolve(__dirname, `wechatpay.svg`),
-            'utf8'
-          ),
-        },
-        link: 'https://surunzi.com/wechatpay.html',
-      },
+      wechatpay,
       {
         icon: 'github',
         link: 'https://github.com/liriliri/echo',
@@ -65,26 +57,8 @@ export default defineConfig({
   },
   vite: {
     resolve: {
-      alias: [
-        { find: '@share', replacement: path.resolve(__dirname, './share') },
-      ],
+      alias: [shareAlias],
     },
   },
-  head: [
-    [
-      'script',
-      {
-        async: '',
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-Z93HBDFESL',
-      },
-    ],
-    [
-      'script',
-      {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z93HBDFESL');`,
-    ],
-  ],
+  head: googleAnalytics('G-Z93HBDFESL'),
 })
