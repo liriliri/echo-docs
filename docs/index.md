@@ -5,7 +5,7 @@ title: 鸿蒙 HDC 桌面应用
 <script setup>
 import AppHome from '@share/components/AppHome.vue'
 
-const version = "1.0.0"
+const version = "1.0.1"
 
 // https://www.shadertoy.com/view/ltXczj
 const code = `const float overallSpeed = 0.2;
